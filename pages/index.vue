@@ -20,9 +20,38 @@
           GitHub
         </a>
       </div>
+      <div class="mt-5">
+        <nuxt-link :to="switchLocalePath('ja')" class="px-2">
+          日本語へ
+        </nuxt-link>
+        <nuxt-link :to="switchLocalePath('en')" class="px-2">
+          英語へ
+        </nuxt-link>
+        <nuxt-link :to="switchLocalePath('zh')" class="px-2">
+          中国語へ
+        </nuxt-link>
+        <h1 class="p-3">{{ $t('lang') }}</h1>
+        <nuxt-link :to="localePath('/confirm')" class="p-3">
+          画面遷移
+        </nuxt-link>
+      </div>
     </div>
   </div>
 </template>
+
+<i18n>
+  {
+    "ja": {
+      "lang": "日本語"
+    },
+    "en": {
+      "lang": "English"
+    },
+    "zh": {
+      "lang": "中文"
+    }
+  }
+</i18n>
 
 <script>
 import Logo from '~/components/Logo.vue'

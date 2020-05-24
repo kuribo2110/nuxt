@@ -42,7 +42,22 @@ export default {
     // Doc: https://bootstrap-vue.js.org
     'bootstrap-vue/nuxt',
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    [
+      'nuxt-i18n',
+      {
+        locales: [
+          { code: 'ja', iso: 'ja_JP' },
+          { code: 'en', iso: 'en-US' },
+          { code: 'zh', iso: 'zh_CN' }
+        ],
+        defaultLocale: 'ja',
+        vueI18n: {
+          fallbackLocale: 'ja'
+        },
+        vueI18nLoader: true
+      }
+    ]
   ],
   /*
    ** Axios module configuration
